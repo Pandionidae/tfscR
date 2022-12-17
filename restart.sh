@@ -1,8 +1,8 @@
-rest37523563=0
+rest37523563=1
 while true
 do
 
-if [ $rest37523563 -gt 3 ]
+if [ $rest37523563 -gt 2 ]
 then
 tmux kill-session -t tfsc
 sleep 5
@@ -12,7 +12,8 @@ printf "\n"
 fi
        tmux new-session -d -s tfsc 'cd $HOME/tfsc/ && $HOME/tfsc/tfsc -m'
        rest37523563=$((rest37523563 + 1))
-        printf "sleep"
+        printf "sleep" 
+        printf $rest37523563
         for((sec=0; sec<60; sec++))
         do
                 printf "."
