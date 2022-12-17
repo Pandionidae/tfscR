@@ -2,7 +2,7 @@ rest37523563=1
 while true
 do
 
-if [ $rest37523563 -gt 2 ]
+if test $rest37523563 -gt 2
 then
 tmux kill-session -t tfsc
 sleep 5
