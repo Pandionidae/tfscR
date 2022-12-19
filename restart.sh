@@ -2,7 +2,7 @@ rest37523563=1
 while true
 do
 
-if test $rest37523563 -gt 30
+if test $rest37523563 -gt 360
 then
 tmux kill-session -t tfsc
 sleep 5
@@ -14,7 +14,7 @@ fi
        rest37523563=$((rest37523563 + 1))
         printf "sleep " 
         printf $rest37523563
-        for((sec=0; sec<60; sec++))
+        for((sec=0; sec<10; sec++))
         do
                 printf "."
                 sleep 1
