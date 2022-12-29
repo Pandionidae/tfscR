@@ -1,3 +1,4 @@
+ tmux new-session -d -s tfsc 'cd $HOME/tfsc/ && $HOME/tfsc/tfsc -m'
  printf "."
 sleep 10
 tmux attach -t tfsc
