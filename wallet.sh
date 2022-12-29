@@ -1,4 +1,5 @@
- tmux attach -t tfsc
+sleep 10
+tmux attach -t tfsc
 sleep 105
  printf "7"
   printf "\n"
