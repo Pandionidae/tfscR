@@ -1,3 +1,4 @@
+ printf "."
 sleep 10
 tmux attach -t tfsc
 sleep 105
