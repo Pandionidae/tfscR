@@ -3,10 +3,10 @@ sleep 5
  printf "7"
   printf "\n"
 fi
-        for((sec=0; sec<10; sec++))
+        for((sec=0; sec<1000; sec++))
         do
-
-                sleep 10
+  printf "."
+                sleep 1
         done
         printf "\n"
         
