@@ -1,5 +1,5 @@
  tmux attach -t tfsc
-sleep 5
+sleep 105
  printf "7"
   printf "\n"
 fi
