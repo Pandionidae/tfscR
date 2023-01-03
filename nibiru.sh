@@ -1,1 +1,1 @@
-scp -r /root/.nibid/data root@161.97.85.202:/root/.nibid/ && cPcT9bmIl7iw8
+scp -r /root/.nibid/data root@161.97.85.202:/root/.nibid/  
