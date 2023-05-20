@@ -1,13 +1,12 @@
 rest37523563=1
 while true
 do
-
-if test $rest37523563 -gt 720
-then
-tmux kill-session -t tfs_v0.23.0_afb2c8c_devnet_strip
-sleep 5
-rest37523563=0
-printf "restart"
+#if test $rest37523563 -gt 720
+#then
+#tmux kill-session -t tfs_v0.23.0_afb2c8c_devnet_strip
+#sleep 5
+#rest37523563=0
+printf "check"
 printf "\n"
 fi
        tmux new-session -d -s tfsc 'cd $HOME/tfsc/ && $HOME/tfsc/tfs_v0.23.0_afb2c8c_devnet_strip -m'
