@@ -6,7 +6,7 @@ do
         for((m=0; m<1; m++))
         do
         tmux new-session -d -s tfsc 'cd $HOME/tfsc/ && $HOME/tfsc/tfs_v0.31.0_2cd2d91_devnet -m'
-                printf "wait 1m"
+                printf "wait 3H"
                 sleep 180m
         done
         printf "\n"
