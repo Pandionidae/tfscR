@@ -5,7 +5,7 @@ do
         echo Last Update: ${date}
         for((m=0; m<1; m++))
         do
-        tmux new-session -d -s tfsc 'cd $HOME/tfsc/ && $HOME/tfsc/tfs_v0.37.0_c64c5b3_testnet -m'
+        tmux new-session -d -s tfsc 'cd $HOME/tfsc/ && $HOME/tfsc/tfs_v0.38.0_874c175_testnet -m'
                 printf "wait 1m"
                 sleep 1m
         done
