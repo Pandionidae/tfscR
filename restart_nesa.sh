@@ -15,8 +15,8 @@ prev_number=$(parse_number)
 while true; do
     echo "Поточний час: $(date)"
     echo "Попередня цифра: $prev_number"
-    echo "Чекаємо 10хв"
-    sleep 60  # Чекаємо 10 хвилин
+    echo "Чекаємо 15хв"
+    sleep 900  # Чекаємо 15 хвилин
 
     # Парсимо цифру знову
     current_number=$(parse_number)
