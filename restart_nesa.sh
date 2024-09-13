@@ -5,7 +5,7 @@ URL="https://api-test.nesa.ai/nodes/HWV9ajkfZo4wkBV5GXX6JMMWr19eZTdjT45AoupjfEwV
 #!/bin/bash
 
 parse_number() {
-    curl -s "$URL" | grep -oP '(?<=<div class="flex items-center gap-2 text-lg">)\d+'
+  curl -s "$URL" | grep -oP '"requestsCount":\K\d+'
 }
 
 # Змінна для зберігання попередньої цифри
