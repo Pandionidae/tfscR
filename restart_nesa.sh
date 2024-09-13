@@ -13,8 +13,10 @@ prev_number=$(parse_number)
 
 # Цикл, що виконується постійно
 while true; do
+    echo "Поточний час: $(date)"
     echo "Попередня цифра: $prev_number"
-    sleep 600  # Чекаємо 10 хвилин
+    echo "Чекаємо 10хв"
+    sleep 60  # Чекаємо 10 хвилин
 
     # Парсимо цифру знову
     current_number=$(parse_number)
@@ -26,7 +28,8 @@ while true; do
     if [[ "$current_number" == "$prev_number" ]]; then
         # Виконуємо вашу команду, якщо цифра не змінилася
         echo "Цифра не змінилася. Виконую команду."
-        # Замість echo напишіть команду, яку потрібно виконати
+        # напишіть команду, яку потрібно виконати
+        docker restart orchestrator ipfs_node mongodb docker-watchtower-1
     else
         echo "Цифра змінилася. Чекаємо ще 10 хвилин."
     fi
