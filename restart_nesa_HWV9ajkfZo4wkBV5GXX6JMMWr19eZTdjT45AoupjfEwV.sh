@@ -13,10 +13,11 @@ prev_number=$(parse_number)
 
 # Цикл, що виконується постійно
 while true; do
+    echo "                     "
     echo "Поточний час: $(date)"
     echo "Попередня цифра: $prev_number"
-    echo "Чекаємо 15хв"
-    sleep 900  # Чекаємо 15 хвилин
+    echo "Чекаємо 30хв"
+    sleep 1800  # Чекаємо 30 хвилин
 
     # Парсимо цифру знову
     current_number=$(parse_number)
