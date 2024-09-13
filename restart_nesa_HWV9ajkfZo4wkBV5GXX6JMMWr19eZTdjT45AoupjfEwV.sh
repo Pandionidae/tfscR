@@ -32,7 +32,7 @@ while true; do
         # напишіть команду, яку потрібно виконати
         docker restart orchestrator ipfs_node mongodb docker-watchtower-1
     else
-        echo "Цифра змінилася. Чекаємо ще 10 хвилин."
+        echo "Цифра змінилася. Чекаємо ще 30 хвилин."
     fi
 
     # Оновлюємо попереднє значення цифри
