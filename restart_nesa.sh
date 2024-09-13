@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-URL="https://node.nesa.ai/nodes/HWV9ajkfZo4wkBV5GXX6JMMWr19eZTdjT45AoupjfEwV"  
+URL="https://api-test.nesa.ai/nodes/HWV9ajkfZo4wkBV5GXX6JMMWr19eZTdjT45AoupjfEwV/stat"  
 #!/bin/bash
 
 parse_number() {
