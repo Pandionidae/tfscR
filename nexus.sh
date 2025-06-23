@@ -1,12 +1,20 @@
+
 while true
 do
-        date=$(date +"%H:%M")
-        echo Last Update: ${date}
-        for((m=0; m<1; m++))
-        do
+    date=$(date +"%H:%M")
+    echo "Last Update: ${date}"
+
+    # Завантажити змінну NODE_ID
+    source ~/.profile
+
+    if [ -z "$NODE_ID" ]; then
+        echo "❌ NODE_ID не задано! Перевір ~/.profile"
+    else
         tmux new-session -d -s nexus "source /root/.bashrc && source ~/.profile && nexus-network start --node-id ${NODE_ID}"
-                printf "wait 1m"
-                sleep 1m
-        done
-        printf "\n"
+        echo "✅ Стартував node з ID: ${NODE_ID}"
+    fi
+
+    echo "⏳ wait 1m"
+    sleep 1m
+    echo
 done
