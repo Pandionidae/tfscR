@@ -5,13 +5,13 @@ do
     echo "Last Update: ${date}"
 
     # Завантажити змінну NODE_ID
-    source /root/.bashrc
+    source ~/.bashrc
     source ~/.profile
 
     if [ -z "$NODE_ID" ]; then
         echo "❌ NODE_ID не задано! Перевір ~/.profile"
     else
-        tmux new-session -d -s nexus "source ~/.profile && cd $HOME/.nexus/bin && nexus-network start --node-id ${NODE_ID}"
+        tmux new-session -d -s nexus "source ~/.profile && source ~/.bashrc && nexus-network start --node-id ${NODE_ID}"
         echo "✅ Стартував node з ID: ${NODE_ID}"
     fi
 
