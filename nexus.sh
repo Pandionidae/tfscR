@@ -4,7 +4,7 @@ do
         echo Last Update: ${date}
         for((m=0; m<1; m++))
         do
-        tmux new-session -d -s nexus 'source /root/.bashrc && nexus-network start --node-id 7050816'
+        tmux new-session -d -s nexus "source /root/.bashrc && source ~/.profile && nexus-network start --node-id ${NODE_ID}"
                 printf "wait 1m"
                 sleep 1m
         done
