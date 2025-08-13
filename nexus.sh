@@ -11,7 +11,7 @@ do
     if [ -z "$NODE_ID" ]; then
         echo "❌ NODE_ID не задано! Перевір ~/.profile"
     else
-        tmux new-session -d -s nexus "source ~/.profile && /root/.nexus/bin/nexus-network start --node-id ${NODE_ID}"
+        tmux new-session -d -s nexus "source ~/.profile && /root/.nexus/bin/nexus-network start --node-id ${NODE_ID} --max-threads 8"
         echo "✅ Стартував node з ID: ${NODE_ID}"
     fi
 
