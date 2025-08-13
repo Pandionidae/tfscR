@@ -13,12 +13,13 @@ do
     if [ -z "$NODE_ID" ]; then
         echo "❌ NODE_ID не задано! Перевір ~/.profile"
     else
-        tmux new-session -d -s nexus "source ~/.profile && /root/.nexus/bin/nexus-network start --node-id ${NODE_ID}"
+        tmux new-session -d -s nexus "source ~/.profile && /root/.nexus/bin/nexus-network start --node-id ${NODE_ID} --max-threads 8"
         echo "✅ Стартував node з ID: ${NODE_ID}"
     fi
 
-    echo "⏳ wait 50sec"
-    sleep 50
+    wait_time=$((RANDOM % 16 + 30)) 
+    echo "⏳ wait ${wait_time}sec"
+    sleep $wait_time
     tmux kill-session -t nexus
     echo
 done
