@@ -17,8 +17,8 @@ do
         echo "✅ Стартував node з ID: ${NODE_ID}"
     fi
 
-    echo "⏳ wait 33s"
-    sleep 33
+    echo "⏳ wait 1m"
+    sleep 1m
     tmux kill-session -t nexus
     echo
 done
